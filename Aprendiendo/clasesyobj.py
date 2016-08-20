@@ -13,22 +13,18 @@ class Ingsistemas(Humano):
 		print ('Voy a programar en ', lenguaje)
 
 class Licderecho(Humano):
+	def __init__(self,escuela):
+		print('Lic. en derecho egresado de: ', escuela)
+
 	def estudiarcaso(self,caso):
 		print ('Estudiar caso de ', caso)
 
+class Estudioso(Licderecho,Ingsistemas): # se tomara el metodo init de la primera clase que aparezca en la herencia
+	pass
 
-pedro = Ingsistemas()
-raul = Licderecho(24)
+pepe = Estudioso('IPN')
+pepe.hablar('Hola soy de herencia multiple')
+pepe.programar('Java')
+pepe.estudiarcaso('Juanito')
 
-
-pedro.hablar('Hola soy Pedro')
-raul.hablar('Hola pedro, soy Raul')
-
-pedro.programar('Python')
-raul.estudiarcaso('Pedro')
-
-"""
-print ('Soy pedro y tengo ', pedro.edad)
-print ('Soy raul y tengo ',raul.edad)
-"""
 
