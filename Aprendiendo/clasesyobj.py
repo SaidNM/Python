@@ -4,17 +4,31 @@ class Humano:
 
 
 	def hablar(self,mensaje):
-		print (self.edad)
 		print (mensaje)
 
+class Ingsistemas(Humano):
+	def __init__(self): #sobreescriir metodo de edad, solamente en la clase Ing en sistemas
+		print ('Hola')
+	def programar(self,lenguaje):
+		print ('Voy a programar en ', lenguaje)
+
+class Licderecho(Humano):
+	def estudiarcaso(self,caso):
+		print ('Estudiar caso de ', caso)
 
 
-pedro = Humano(26)
-raul = Humano(25)
+pedro = Ingsistemas()
+raul = Licderecho(24)
 
-pedro.hablar('Hola')
-raul.hablar('Hola pedro')
+
+pedro.hablar('Hola soy Pedro')
+raul.hablar('Hola pedro, soy Raul')
+
+pedro.programar('Python')
+raul.estudiarcaso('Pedro')
+
+"""
 print ('Soy pedro y tengo ', pedro.edad)
 print ('Soy raul y tengo ',raul.edad)
-
+"""
 
